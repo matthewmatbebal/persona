@@ -289,7 +289,9 @@ export default async function Landing() {
                         description="Консультируем по вопросам, которые могут возникнуть у регуляторов."
                     />
                 </div>
-                <Button variant="primary" size="sm" className={styles.startButton}>Начать работу</Button>
+                <Link href="#contact">
+                    <Button variant="primary" size="sm" className={styles.startButton}>Начать работу</Button>
+                </Link>
             </div>
         </div>
 

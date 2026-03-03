@@ -231,17 +231,22 @@
   padding-left: 40px
   padding-right: 40px
   padding-bottom: 0
-  gap: 32px
+  gap: 20px
+  margin-top: 40px
   @media (min-width: 640px)
+    margin-top: 0
     align-items: flex-end
     padding-right: 40px
   @media (min-width: 1024px)
+    margin-top: 0
     padding-bottom: 150px
   @media (min-width: 1280px)
     flex-direction: row
+    margin-top: 0
     transform: translateX(0)
     padding-bottom: 115px
   @media (min-width: 1536px)
+    margin-top: 0
     transform: translateX(-40px)
     padding-bottom: 75px
 
@@ -806,9 +811,9 @@
     z-index: 0
     padding-top: 85px
 
-    .faqWrapper
-      position: relative
-      z-index: 99
+  .faqWrapper
+    position: relative
+    z-index: 10
 
 .faqTitle
   font-family: var(--font-cygre-semibold)
