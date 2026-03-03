@@ -10,10 +10,10 @@ export default async function Header() {
             <div className={styles.inner}>
                 <Logotype/>
                 <div className={styles.nav}>
-                    <Link href="#">О нас</Link>
-                    <Link href="#">Услуги</Link>
-                    <Link href="#">Штрафы</Link>
-                    <Link href="#">Частые вопросы</Link>
+                    <Link href="#hero">О нас</Link>
+                    <Link href="#services">Услуги</Link>
+                    <Link href="#problems">Штрафы</Link>
+                    <Link href="#faq">Частые вопросы</Link>
                 </div>
             </div>
         </header>

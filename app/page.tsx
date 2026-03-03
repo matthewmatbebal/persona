@@ -1,5 +1,6 @@
 'use server'
 import Image from "next/image";
+import Link from "next/link";
 import Header from "./components/header/header";
 import Button from "./components/button/button";
 import ServiceCard from "./components/service-card/service-card";
@@ -21,7 +22,7 @@ export default async function Landing() {
         <Header/>
         <div className={styles.wrapper}>
             {/* HERO */}
-            <div className={styles.hero}>
+            <div id="hero" className={styles.hero}>
                 <div className={styles.heroInner}>
                     <div className={styles.heroContent}>
                         <h1 className={styles.heroTitleDesktop}>
@@ -79,7 +80,7 @@ export default async function Landing() {
                         </div>
                     </div>
                     <div className={styles.servicesButtons}>
-                        <Button variant="dark" size="md">Оставить заявку</Button>
+                        <Link href="#contact"><Button variant="dark" size="md">Оставить заявку</Button></Link>
                         <CalculateButton/>
                     </div>
                 </div>
@@ -87,7 +88,7 @@ export default async function Landing() {
         </div>
 
         {/* SERVICES CARDS */}
-        <div className={styles.servicesSection}>
+        <div id="services" className={styles.servicesSection}>
             <div className={styles.servicesInner}>
                 <div className={styles.servicesHeading}>
                     <h2 className={styles.servicesH2}>Чем мы занимаемся?</h2>
@@ -186,7 +187,7 @@ export default async function Landing() {
         </div>
 
         {/* PROBLEMS */}
-        <div className={styles.problemsSection}>
+        <div id="problems" className={styles.problemsSection}>
             <div className={styles.problemsInner}>
                 <div className={styles.problemsCorners}>
                     <div className={`${styles.cornerRight} after-rounding-big-block-right`}></div>
@@ -298,9 +299,11 @@ export default async function Landing() {
         </div>
 
         {/* FAQ */}
-        <div className={styles.faqSection}>
+        <div id="faq" className={styles.faqSection}>
             <h3 className={styles.faqTitle}>Частые вопросы</h3>
-            <AccordionContainer/>
+            <div className={styles.faqWrapper}>
+                <AccordionContainer/>
+            </div>
             <Image
                 src="/cloud.png"
                 alt="cloud image"
@@ -316,7 +319,7 @@ export default async function Landing() {
         </div>
 
         {/* CONTACT */}
-        <div className={styles.contactSection}>
+        <div id="contact" className={styles.contactSection}>
             <div className={styles.contactInner}>
                 <div className={styles.contactLeft}>
                     <h3 className={styles.contactTitle}>Остались вопросы?</h3>

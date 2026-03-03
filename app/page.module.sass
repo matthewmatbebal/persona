@@ -187,14 +187,12 @@
   border-radius: 9999px
   line-height: 11px
   @media (min-width: 640px)
-    width: 115px
     height: 35px
     font-size: 22px
     line-height: 1
     display: flex
     align-items: center
     justify-content: center
-    padding: 0
 
 .servicesUl
   color: #2f394d
@@ -245,7 +243,7 @@
     padding-bottom: 115px
   @media (min-width: 1536px)
     transform: translateX(-40px)
-    padding-bottom: 55px
+    padding-bottom: 75px
 
 // ========================
 // SERVICES CARDS SECTION
@@ -349,7 +347,7 @@
 
   @media (min-width: 640px)
     background-color: #E8F1FF
-    padding: 24px 23px 44px 28px
+    padding: 24px 23px 28px 28px
     margin-top: -26px
     margin-left: -12px
     position: relative
@@ -536,7 +534,7 @@
     content: ''
     position: absolute
     background: #fafbfd
-    height: 800px
+    height: 720px
     width: 100vw
     z-index: -1
     bottom: 50px
@@ -626,13 +624,16 @@
   position: relative
   z-index: 1
 
+  @media (max-width: 640px)
+    padding-bottom: 0
+
   &:before
     content: ''
     position: absolute
     top: -100px
     left: 0
     width: 100%
-    height: 1430px
+    height: 1220px
     background-color: #E8F1FF
     border-bottom-left-radius: 70px
     border-bottom-right-radius: 70px
@@ -728,9 +729,7 @@
   align-items: center
   z-index: 1
   gap: 48px
-  padding-bottom: 150px
-  @media (min-width: 640px)
-    padding-bottom: 0
+  padding-bottom: 0
 
   .startButton
     font-size: 20px
@@ -798,14 +797,18 @@
   gap: 35px
   overflow-x: clip
   background: linear-gradient(0deg, #526179 0%, #D0E1F9 100%)
-  z-index: 1
 
   @media (max-width: 640px)
-    margin-top: -270px
+    margin-top: -50px
     padding-bottom: 20px
     border-bottom-left-radius: 70px
     border-bottom-right-radius: 70px
     z-index: 0
+    padding-top: 85px
+
+    .faqWrapper
+      position: relative
+      z-index: 99
 
 .faqTitle
   font-family: var(--font-cygre-semibold)
@@ -900,3 +903,13 @@
   @media (min-width: 640px)
     font-size: 22px
     max-width: none
+
+// ========================
+// NAV SCROLL ANCHORS
+// ========================
+.hero,
+.servicesSection,
+.problemsSection,
+.faqSection,
+.contactSection
+  scroll-margin-top: 104px

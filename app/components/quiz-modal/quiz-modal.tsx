@@ -212,9 +212,15 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                                     onClick={() => setContactMethod(method)}
                                 >
                                     {method === 'Телефон' && (
-                                        <Image src="/icons/phone.svg" alt="" width={18} height={18} className={styles.icon} />
+                                        <Image src="/icons/phone-circle.svg" alt="" width={18} height={18} className={styles.icon} />
                                     )}
-                                    {method}
+                                    {method === 'WhatsApp' && (
+                                      <Image src="/icons/whatsapp-circle.svg" alt="" width={18} height={18} className={styles.icon} />
+                                    )}
+                                    {method === 'Telegram' && (
+                                      <Image src="/icons/telegram.svg" alt="" width={18} height={18} className={styles.icon} />
+                                    )}
+                                    <span>{method}</span>
                                 </button>
                             ))}
                         </div>

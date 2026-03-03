@@ -220,25 +220,33 @@
   align-items: center
   gap: 9px
   padding: 10px 18px
-  border: 1.5px solid #C5D3E0
-  border-radius: 9999px
-  background: rgba(255, 255, 255, 0.45)
+  border: none
+  border-radius: 12px
+  background: #FAFBFD
   cursor: pointer
-  font-size: 16px
+  font-size: 18px
   color: #2F394D
+  box-sizing: border-box
   font-family: var(--font-cygre-medium)
   transition: border-color 0.15s, background 0.15s
   &:hover
     border-color: #8FA3B8
 
+  span
+    padding-bottom: 3px
+
+
+  .icon
+    width: 31px
+    height: 31px
   @media (max-width: 640px)
     font-size: 14px
     .icon
       display: none
 
 .contactTabSelected
-  border-color: #526179
-  background: rgba(255, 255, 255, 0.75)
+  background: #A0B0C81A
+  outline: 2px solid #A0B0C8CC
 
 // ========================
 // FOOTER
@@ -273,7 +281,7 @@
   color: #FFFFFF
   border: none
   border-radius: 9999px
-  padding: 13px 30px
+  padding: 13px 30px 16px
   font-size: 18px
   font-family: var(--font-cygre-semibold)
   cursor: pointer
