@@ -1,26 +1,64 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fafbfd;
+  color: #2F394D;
+  font-family: var(--font-cygre-medium);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.after-rounding-block:after {
+  content: "";
+  background: #E8F1FF;
+  width: 55px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  top: -55px;
+  right: 0;
+  -webkit-mask-image: linear-gradient(0deg, red, red), radial-gradient(55px at 0 0, green 100%, #0000 81%);
+  mask-image: linear-gradient(0deg, red, red), radial-gradient(55px at 0 0, green 100%, #0000 81%);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+}
+
+.after-rounding-big-block-right:after {
+  content: "";
+  background: #FAFBFD;
+  width: 78px;
+  height: 78px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: -77px;
+  mask-composite: subtract;
+  mask-image: linear-gradient(0deg, red, red), radial-gradient(circle 95px at right top, green 80%, transparent 81%);
+}
+
+.after-rounding-big-block-left:after {
+  content: "";
+  background: #FAFBFD;
+  width: 78px;
+  height: 78px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -77px;
+  mask-composite: subtract;
+  mask-image: linear-gradient(0deg, red, red), radial-gradient(circle 95px at left top, green 80%, transparent 81%);
 }

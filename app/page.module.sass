@@ -1,0 +1,902 @@
+// ========================
+// WRAPPER
+// ========================
+.wrapper
+  margin-top: -104px
+
+// ========================
+// HERO
+// ========================
+.hero
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 743px
+  background: linear-gradient(to top, #D0E1F9, #526179)
+
+.heroInner
+  max-width: 1650px
+  height: 100%
+  width: 100%
+  position: relative
+  overflow-x: clip
+
+.heroContent
+  display: flex
+  flex-direction: column
+  gap: 30px
+  position: absolute
+  top: 105px
+  padding-left: 40px
+  padding-right: 40px
+  max-width: 1014px
+  width: 100%
+  z-index: 1
+  @media (min-width: 640px)
+    gap: 32px
+    padding-left: 0
+    padding-right: 0
+    top: 130px
+
+
+.heroTitleDesktop
+  display: none
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  color: #F2F5FA
+  @media (min-width: 640px)
+    display: block
+    font-size: 56px
+    line-height: 80px
+
+.heroTitleMobile
+  display: block
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  color: #F2F5FA
+  line-height: 38px
+  @media (min-width: 640px)
+    display: none
+
+.heroSubtitle
+  font-family: var(--font-cygre-medium)
+  max-width: 330px
+  font-size: 16px
+  line-height: 24px
+  color: #F2F5FA
+  @media (min-width: 640px)
+    max-width: none
+    font-size: 22px
+    line-height: 35px
+
+.heroLock
+  display: none
+  position: absolute
+  right: -135px
+  top: 185px
+  @media (min-width: 640px)
+    display: block
+
+// ========================
+// SERVICES OVERVIEW (фон + список услуг)
+// ========================
+.servicesOverview
+  display: flex
+  justify-content: center
+  width: 100%
+  margin-top: -275px
+  position: relative
+  overflow-x: clip
+  @media (min-width: 640px)
+    margin-top: -215px
+
+.bg1
+  display: none
+  position: absolute
+  top: 0
+  left: 50%
+  z-index: 1
+  transform: translateX(-50%)
+  width: 100vw
+  height: auto
+  @media (min-width: 640px)
+    display: block
+
+.bgBlue
+  position: absolute
+  width: 100%
+  height: 105px
+  bottom: -5px
+  background-color: #cfdff7
+  z-index: 0
+
+  @media (max-width: 640px)
+    display: none
+
+.cloudBg
+  position: absolute
+  top: -150px
+  display: none
+  left: 25%
+  z-index: 0
+  @media (min-width: 1024px)
+    display: block
+
+.servicesLayout
+  max-width: 1650px
+  width: 100%
+  z-index: 1
+  display: flex
+  flex-direction: column-reverse
+  justify-content: space-between
+  @media (min-width: 640px)
+    flex-direction: row
+
+.servicesList
+  position: relative
+  width: auto
+  height: 310px
+  z-index: 1
+  padding-left: 15px
+  padding-right: 15px
+  padding-top: 60px
+  display: flex
+  gap: 23px
+  flex-direction: column
+  @media (min-width: 640px)
+    width: 825px
+    padding-left: 0
+    padding-right: 0
+    padding-top: 65px
+    gap: 33px
+  @media (min-width: 1280px)
+    padding-left: 49px
+    padding-right: 49px
+  &::before
+    content: ''
+    position: absolute
+    top: 37px
+    width: 100%
+    height: 100%
+    background-color: #FAFBFD
+    border-radius: 60px
+    left: 0
+    z-index: -1
+    display: block
+    @media (min-width: 640px)
+      display: none
+
+  .servicesInner
+    gap: 23px
+    display: flex
+    flex-direction: column
+    height: auto
+
+    @media (max-width: 640px)
+      padding: 35px
+      border: 8px solid #A0B0C81A
+      border-radius: 55px
+
+.servicesTag
+  color: #2F394D
+  font-family: var(--font-cygre-medium)
+  font-size: 16px
+  padding: 7px 20px 10px
+  width: fit-content
+  border: 1px solid #2F394D
+  border-radius: 9999px
+  line-height: 11px
+  @media (min-width: 640px)
+    width: 115px
+    height: 35px
+    font-size: 22px
+    line-height: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+
+.servicesUl
+  color: #2f394d
+  display: flex
+  flex-direction: column
+  gap: 20px
+  list-style: none
+  font-size: 14px
+  line-height: 16px
+  margin-left: 8px
+  padding-left: 3px
+  text-align: start
+  @media (min-width: 640px)
+    gap: 19px
+    font-size: 18px
+    padding-left: 5px
+    letter-spacing: 0
+  li
+    display: flex
+    align-items: flex-start
+    &::before
+      content: url('/ellipse-small.svg')
+      flex-shrink: 0
+      margin-top: 2px
+    span
+      margin-left: 12px
+    @media (min-width: 640px)
+      &::before
+        content: url('/ellipse.svg')
+      span
+        margin-left: 24px
+
+.servicesButtons
+  display: flex
+  flex-direction: column
+  padding-left: 40px
+  padding-right: 40px
+  padding-bottom: 0
+  gap: 32px
+  @media (min-width: 640px)
+    align-items: flex-end
+    padding-right: 40px
+  @media (min-width: 1024px)
+    padding-bottom: 150px
+  @media (min-width: 1280px)
+    flex-direction: row
+    transform: translateX(0)
+    padding-bottom: 115px
+  @media (min-width: 1536px)
+    transform: translateX(-40px)
+    padding-bottom: 55px
+
+// ========================
+// SERVICES CARDS SECTION
+// ========================
+.servicesSection
+  position: relative
+  z-index: 1
+  background-color: #FAFBFD
+  display: flex
+  justify-content: center
+  margin-top: 85px
+  border-bottom: 8px solid #A0B0C81A
+  padding-bottom: 44px
+  overflow-x: clip
+  @media (max-width: 640px)
+    padding-bottom: 0
+
+.servicesInner
+  max-width: 1650px
+  height: 100%
+  width: 100%
+  position: relative
+  @media (min-width: 640px)
+    padding-top: 45px
+
+.servicesHeading
+  display: flex
+  align-items: center
+  flex-direction: column
+  gap: 20px
+  padding: 0 40px
+  margin-bottom: 40px
+
+  @media (min-width: 640px)
+    align-items: flex-end
+    gap: 30px
+    padding: 0
+    margin-bottom: 0
+
+.servicesH2
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  color: #2F394D
+  text-align: end
+  width: 100%
+  @media (min-width: 640px)
+    font-size: 50px
+    line-height: 88px
+
+.servicesSubtitle
+  font-family: var(--font-cygre-medium)
+  font-size: 16px
+  line-height: 26px
+  color: #2F394D
+  max-width: 1094px
+  text-align: end
+  @media (min-width: 640px)
+    font-size: 22px
+    line-height: inherit
+
+.servicesGrid
+  display: none
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, auto)
+  gap: 50px 0
+  margin-top: 28px
+  padding-left: 20px
+  padding-right: 20px
+  @media (min-width: 640px)
+    padding-left: 0
+    padding-right: 0
+  @media (min-width: 1536px)
+    display: grid
+    margin-top: 60px
+
+.card02
+  @media (min-width: 640px)
+    margin-left: 16px
+
+.card03Container
+  grid-row: span 2
+  border-radius: 65px 0 0 0
+  position: relative
+  @media (min-width: 640px)
+    padding: 28px
+    margin-top: -25px
+    background-color: #E8F1FF
+    &::after
+      content: ''
+      width: 9999px
+      height: 100%
+      position: absolute
+      top: 0
+      left: 100%
+      background-color: #E8F1FF
+
+.card05Container
+  grid-row-start: 2
+  grid-column-start: 2
+  border-radius: 65px 0 0 65px
+
+  @media (min-width: 640px)
+    background-color: #E8F1FF
+    padding: 24px 23px 44px 28px
+    margin-top: -26px
+    margin-left: -12px
+    position: relative
+
+.servicesFlex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  gap: 40px
+  padding-right: 20px
+  padding-left: 20px
+  position: relative
+  padding-bottom: 44px
+  &:before
+    content: ''
+    position: absolute
+    height: 850px
+    width: 100%
+    background-color: #E8F1FF
+    z-index: -1
+    bottom: 20px
+    border-radius: 70px
+  @media (min-width: 1536px)
+    display: none
+
+// ========================
+// SHADOW CARDS SECTION
+// ========================
+.shadowSection
+  display: flex
+  justify-content: center
+  padding-bottom: 80px
+  background: linear-gradient(to top, #A0B0C8CC, #FAFBFD)
+  @media (max-width: 640px)
+    padding-bottom: 20px
+    border-bottom-right-radius: 70px
+    border-bottom-left-radius: 70px
+
+
+.shadowInner
+  max-width: 1710px
+  height: 100%
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 20px
+  padding-left: 20px
+  padding-right: 20px
+  @media (min-width: 640px)
+    flex-direction: row
+    gap: 0
+    padding-left: 0
+    padding-right: 0
+
+.shadowMobileTitle
+  display: block
+  text-align: center
+  padding-top: 20px
+  @media (min-width: 640px)
+    display: none
+
+.shadowMobileTitleH3
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  line-height: 30px
+
+.shadowMobileTitleP
+  font-size: 16px
+  margin-top: 32px
+  margin-bottom: 12px
+
+.shadowCol
+  max-width: 500px
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 24px
+  position: relative
+  top: 0
+  @media (min-width: 640px)
+    gap: 45px
+    top: 100px
+
+.shadowColCenter
+  display: flex
+  align-items: center
+  max-width: 500px
+  width: 100%
+  flex-direction: column
+  gap: 20px
+  position: relative
+  top: 0
+  @media (min-width: 640px)
+    gap: 48px
+    top: 35px
+
+.shadowDesktopTitle
+  display: none
+  text-align: center
+  min-height: 220px
+  @media (min-width: 640px)
+    display: block
+
+.shadowDesktopTitleH3
+  font-family: var(--font-cygre-semibold)
+  font-size: 50px
+  line-height: 76px
+  margin-top: -18px
+
+.shadowDesktopTitleP
+  font-size: 22px
+  margin-top: 16px
+
+// ========================
+// PROBLEMS SECTION
+// ========================
+.problemsSection
+  display: flex
+  justify-content: center
+  margin-top: 0
+  @media (min-width: 1536px)
+    margin-top: -235px
+
+.problemsInner
+  max-width: 1800px
+  height: 100%
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 90px
+
+.problemsCorners
+  display: none
+  flex-direction: row
+  justify-content: space-between
+  width: 100%
+  position: absolute
+  @media (min-width: 640px)
+    display: flex
+
+.cornerRight
+  width: calc(580px + max(0px, (100vw - 1800px) / 2))
+  margin-left: min(0px, calc(-1 * (100vw - 1800px) / 2))
+  height: 237px
+  background-color: #FAFBFD
+  border-radius: 0 115px 0 0
+  position: relative
+
+.cornerLeft
+  width: calc(580px + max(0px, (100vw - 1800px) / 2))
+  margin-right: min(0px, calc(-1 * (100vw - 1800px) / 2))
+  height: 237px
+  background-color: #FAFBFD
+  border-radius: 115px 0 0 0
+  position: relative
+
+.problemsBg
+  background-color: #FAFBFD
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 235px
+
+  @media (max-width: 640px)
+    display: none
+
+.problemsMobile
+  display: flex
+  flex-direction: column
+  gap: 32px
+  padding: 15px 17px
+  z-index: 2
+  position: relative
+  border: 8px solid #A0B0C81A
+  border-top: none
+  border-bottom-right-radius: 70px
+  border-bottom-left-radius: 70px
+  background: #FAFBFD
+
+  &:before
+    content: ''
+    position: absolute
+    background: #fafbfd
+    height: 800px
+    width: 100vw
+    z-index: -1
+    bottom: 50px
+    left: -8px
+
+  @media (min-width: 640px)
+    display: none
+
+.problemsTop
+  display: none
+  flex-direction: column
+  justify-content: space-between
+  width: 100%
+  z-index: 1
+  position: relative
+  top: 15px
+  padding-right: 17px
+  padding-left: 17px
+
+  @media (min-width: 640px)
+    display: flex
+    flex-direction: row
+    top: 33px
+
+.problemsTitleMobile
+  display: block
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  padding: 0px 23px
+  @media (min-width: 640px)
+    display: none
+
+.problemsTitleDesktop
+  display: none
+  font-family: var(--font-cygre-semibold)
+  font-size: 50px
+  line-height: 76px
+  max-width: 55%
+  @media (min-width: 640px)
+    display: block
+
+.problemsFirstCard
+  position: relative
+  top: 35px
+  @media (min-width: 640px)
+    right: -5px
+
+.problemsBottom
+  display: none
+  position: relative
+  left: 0
+  max-width: 1115px
+  flex-direction: column
+  top: 120px
+  gap: 15px
+  padding-left: 15px
+  padding-right: 15px
+  z-index: 1
+  @media (min-width: 640px)
+    display: flex
+    top: 0
+    padding-left: 0
+    padding-right: 0
+  @media (min-width: 1024px)
+    flex-direction: row
+    left: 5px
+    position: relative
+    z-index: 3
+  @media (min-width: 1280px)
+    flex-direction: column
+    left: 65px
+    gap: 115px
+  @media (min-width: 1536px)
+    flex-direction: row
+    gap: 115px
+
+
+// ========================
+// STEPS SECTION
+// ========================
+.stepsSection
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding-bottom: 95px
+  padding-top: 32px
+  position: relative
+  z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    top: -100px
+    left: 0
+    width: 100%
+    height: 1430px
+    background-color: #E8F1FF
+    border-bottom-left-radius: 70px
+    border-bottom-right-radius: 70px
+
+    @media (min-width: 640px)
+      display: none
+
+  @media (min-width: 640px)
+    gap: 180px
+  @media (min-width: 1280px)
+    margin-top: -100px
+    padding-top: 0
+  @media (min-width: 1536px)
+    margin-top: -205px
+
+.stepsOuter
+  //max-width: 1920px
+  height: 100%
+  width: 100%
+  position: relative
+  padding-left: 20px
+  padding-right: 20px
+  display: flex
+  justify-content: end
+  padding-bottom: 32px
+
+  @media (min-width: 640px)
+    padding-left: 0
+    padding-right: 0
+    padding-bottom: 0
+
+.stepsBg2
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: 100vw
+  height: auto
+  z-index: 0
+  display: none
+  max-width: unset
+
+  @media (min-width: 1280px)
+    display: block
+
+.stepsBgColor
+
+  @media (min-width: 1280px)
+    height: 700px
+    top: 150%
+    position: absolute
+    width: 100%
+    background-color: #e8f1ff
+    pointer-events: none
+    max-width: 100%
+
+.stepsTitleMobile
+  display: block
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  margin-top: 0
+  z-index: 1
+  position: relative
+  text-align: end
+  line-height: 34px
+  max-width: 200px
+
+  @media (min-width: 768px)
+    font-size: 40px
+    margin-top: 90px
+    text-align: center
+  @media (min-width: 1280px)
+    display: none
+
+.stepsTitleDesktop
+  display: none
+  font-family: var(--font-cygre-semibold)
+  font-size: 50px
+  line-height: 76px
+  z-index: 1
+  position: relative
+  right: 70px
+  top: 70px
+  text-align: end
+  @media (min-width: 1280px)
+    display: block
+
+.stepsContent
+  max-width: 1615px
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  z-index: 1
+  gap: 48px
+  padding-bottom: 150px
+  @media (min-width: 640px)
+    padding-bottom: 0
+
+  .startButton
+    font-size: 20px
+    font-weight: 600
+    width: 205px
+    height: 54px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.stepsRow
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 15px
+  padding: 0 20px
+  align-items: start
+  @media (min-width: 1280px)
+    flex-direction: row
+    align-items: flex-start
+    gap: 0
+    padding: 0
+
+// ========================
+// DIVIDER
+// ========================
+.divider
+  display: none
+  position: relative
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 8px
+  background-color: #A0B0C81A
+  z-index: 1
+  @media (min-width: 640px)
+    display: flex
+
+.dividerTop
+  margin-bottom: 205px
+  z-index: 2
+
+.dividerOval
+  background-color: #FAFBFD
+  width: 555px
+  height: 80px
+  border-radius: 9999px
+  border: 8px solid #A0B0C81A
+
+// ========================
+// FAQ SECTION
+// ========================
+.faqSection
+  position: relative
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding-top: 55px
+  padding-bottom: 135px
+  padding-left: 15px
+  padding-right: 15px
+  margin-top: -205px
+  gap: 35px
+  overflow-x: clip
+  background: linear-gradient(0deg, #526179 0%, #D0E1F9 100%)
+  z-index: 1
+
+  @media (max-width: 640px)
+    margin-top: -270px
+    padding-bottom: 20px
+    border-bottom-left-radius: 70px
+    border-bottom-right-radius: 70px
+    z-index: 0
+
+.faqTitle
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  margin-top: 32px
+  @media (min-width: 640px)
+    font-size: 50px
+    margin-top: 50px
+    line-height: 76px
+
+.faqCloud
+  position: absolute
+  top: 325px
+  left: 20%
+  opacity: 0.5
+  z-index: 0
+
+  @media (max-width: 640px)
+    display: none
+
+// ========================
+// CONTACT SECTION
+// ========================
+.contactSection
+  width: 100%
+  position: relative
+  display: flex
+  justify-content: center
+  padding-left: 20px
+  padding-right: 20px
+  @media (min-width: 640px)
+    padding-left: 0
+    padding-right: 0
+
+.contactInner
+  max-width: 1425px
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative
+  padding-bottom: 40px
+  top: 17px
+  @media (min-width: 640px)
+    flex-direction: row
+    top: 77px
+    padding-bottom: 140px
+
+
+.contactLeft
+  display: flex
+  flex-direction: column
+  gap: 32px
+  padding-left: 20px
+  @media (min-width: 1280px)
+    padding-left: 0
+    gap: 35px
+
+.contactTitle
+  font-family: var(--font-cygre-semibold)
+  font-size: 26px
+  line-height: 18px
+  @media (min-width: 640px)
+    font-size: 50px
+    line-height: 76px
+
+.contactSubtitle
+  font-family: var(--font-cygre-medium)
+  font-size: 16px
+  max-width: 600px
+  @media (min-width: 640px)
+    font-size: 22px
+
+.contactRobotRow
+  display: flex
+  flex-direction: row
+  gap: 20px
+  @media (min-width: 640px)
+    flex-direction: column
+
+.contactRobot
+  width: 105px
+  height: 100px
+  @media (min-width: 640px)
+    width: 372px
+    height: 354px
+
+.contactCallHours
+  font-family: var(--font-cygre-medium)
+  font-size: 16px
+  max-width: 160px
+  @media (min-width: 640px)
+    font-size: 22px
+    max-width: none

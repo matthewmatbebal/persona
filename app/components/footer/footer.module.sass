@@ -1,0 +1,71 @@
+.footer
+  position: relative
+  display: flex
+  justify-content: center
+  width: 100%
+  padding: 32px 20px 20px
+  background: #E8F1FF
+
+.inner
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 1800px
+  color: #F2F5FA
+
+.top
+  display: flex
+  justify-content: space-between
+
+  .elemRow
+    display: flex
+    justify-content: center
+    gap: 20px
+
+    .elem
+      width: 50px
+      height: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      background-color: #A0B0C8
+      color: #080B36
+
+      @media (max-width: 640px)
+        width: 40px
+        height: 40px
+
+      span
+        padding-bottom: 4px
+
+        @media (max-width: 640px)
+          font-size: 14px
+
+.logoWrapper
+  display: none
+  @media (min-width: 640px)
+    display: block
+
+    > *
+      color: #2F394D
+
+.contacts
+  font-size: 18px
+  max-width: 244px
+  width: 100%
+  padding-left: 30px
+  color: #526179
+
+  @media (max-width: 640px)
+    font-size: 14px
+
+.bottom
+  display: flex
+  color: #526179
+  justify-content: center
+  font-size: 16px
+
+  @media (max-width: 640px)
+    font-size: 10px
+    padding-top: 25px

@@ -1,0 +1,50 @@
+.card
+  background-color: #FAFBFD
+  width: 100%
+  min-height: 162px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 8px
+  padding: 16px 16px 24px 24px
+  border-radius: 50px
+  box-shadow: 4px 4px 12px 0px #00000040
+  @media (min-width: 640px)
+    max-width: 700px
+  @media (min-width: 1536px)
+    width: 500px
+    min-height: 220px
+
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+
+.title
+  font-family: var(--font-cygre-semibold)
+  font-size: 22px
+
+  @media (max-width: 640px)
+    font-size: 16px
+
+.icon
+  transform: translateY(-5px)
+
+  @media (max-width: 640px)
+    height: 80px
+
+.description
+  font-size: 18px
+  @media (max-width: 640px)
+    font-size: 14px
+    line-height: 18px
+
+.linkWrapper
+  width: 100%
+
+.link
+  float: right
+  font-family: var(--font-cygre-semibold)
+  font-size: 20px
+  transform: translate(-12px, 10px)

@@ -1,0 +1,35 @@
+<svg width="1922" height="987" viewBox="0 0 1922 987" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_28_36)">
+<path d="M1366 120C1366 53.7258 1419.73 0 1486 0H1922V326H1366V120Z" fill="#E8F1FF"/>
+<path d="M0 141H1922V987H0V141Z" fill="#E8F1FF"/>
+<g clip-path="url(#clip1_28_36)">
+<mask id="mask0_28_36" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1390" y="27" width="804" height="137">
+<path d="M2194 27H1486C1432.98 27 1390 66.6643 1390 115.593V163.58H2194V27Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_28_36)">
+<path d="M2194 19.6172H1486C1428.56 19.6172 1382 62.5868 1382 115.592H1398C1398 70.7415 1437.4 34.3826 1486 34.3826H2194V19.6172ZM1486 19.6172C1428.56 19.6172 1382 62.5868 1382 115.592V163.58H1398V115.592C1398 70.7415 1437.4 34.3826 1486 34.3826V19.6172Z" fill="#A0B0C8" fill-opacity="0.1"/>
+</g>
+<mask id="mask1_28_36" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="256" y="163" width="1142" height="163">
+<path d="M256 326H1254C1333.53 326 1398 266.504 1398 193.111V163.58H256V326Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_28_36)">
+<path d="M256 333.383H1254C1337.95 333.383 1406 270.581 1406 193.111H1390C1390 262.427 1329.11 318.617 1254 318.617H256V333.383ZM1254 333.383C1337.95 333.383 1406 270.581 1406 193.111V163.58H1390V193.111C1390 262.427 1329.11 318.617 1254 318.617V333.383Z" fill="#A0B0C8" fill-opacity="0.1"/>
+</g>
+</g>
+<mask id="mask2_28_36" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-871" y="164" width="1142" height="163">
+<path d="M271 326.42H-727C-806.529 326.42 -871 266.923 -871 193.531V164H271V326.42Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_28_36)">
+<path d="M271 333.802H-727C-810.947 333.802 -879 271 -879 193.531H-863C-863 262.846 -802.111 319.037 -727 319.037H271V333.802ZM-727 333.802C-810.947 333.802 -879 271 -879 193.531V164H-863V193.531C-863 262.846 -802.111 319.037 -727 319.037V333.802Z" fill="#A0B0C8" fill-opacity="0.1"/>
+</g>
+<path d="M1366 179C1366 245.274 1312.27 299 1246 299H0V141H1366V179Z" fill="#FAFBFD"/>
+</g>
+<defs>
+<clipPath id="clip0_28_36">
+<rect width="1922" height="987" fill="white"/>
+</clipPath>
+<clipPath id="clip1_28_36">
+<rect width="1920" height="299" fill="white" transform="matrix(-1 0 0 1 2191 27)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,282 @@
+.modal
+  background: linear-gradient(180deg, #FAFBFD 0%, #B8CAE6 100%)
+  border-radius: 30px
+  width: 100%
+  min-width: 984px
+  min-height: 640px
+  padding: 50px
+  display: flex
+  flex-direction: column
+  position: relative
+  @media (max-width: 640px)
+    min-width: unset
+    min-height: unset
+    padding: 28px 20px
+    border-radius: 24px
+    max-height: 90vh
+    overflow-y: auto
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 24px
+
+.title
+  font-family: var(--font-cygre-semibold)
+  font-size: 36px
+  font-weight: 600
+  color: #2F394D
+  line-height: 36px
+  max-width: 725px
+  @media (max-width: 640px)
+    font-size: 22px
+    line-height: 28px
+
+.closeBtn
+  background: none
+  border: none
+  cursor: pointer
+  font-size: 22px
+  color: #526179
+  line-height: 1
+  padding: 4px
+  flex-shrink: 0
+  margin-top: 2px
+
+.subtitle
+  font-size: 15px
+  color: #526179
+  margin-bottom: 20px
+  font-family: var(--font-cygre-medium)
+
+.body
+  flex: 1
+  display: flex
+  flex-direction: column
+
+// ========================
+// RADIO OPTIONS
+// ========================
+.radioRow
+  display: flex
+  gap: 34px
+  margin-top: 21px
+  @media (max-width: 640px)
+    flex-direction: column
+    gap: 12px
+    margin-top: 16px
+
+.radioCard
+  flex: 1
+  display: flex
+  align-items: center
+  gap: 20px
+  border: 2px solid #526179
+  height: 78px
+  padding: 0 24px
+  border-radius: 14px
+  cursor: pointer
+  font-size: 18px
+  line-height: 13px
+  color: #2F394D
+  background: rgba(255, 255, 255, 0.45)
+  user-select: none
+  transition: border-color 0.15s, background 0.15s
+  font-family: var(--font-cygre-medium)
+  &:hover
+    border-color: #8FA3B8
+  @media (max-width: 640px)
+    height: 60px
+    font-size: 16px
+    padding: 10px 18px
+    gap: 14px
+
+.radioCardSelected
+  border-color: #526179
+  background: rgba(255, 255, 255, 0.75)
+
+.radio
+  width: 24px
+  height: 24px
+  min-width: 24px
+  border-radius: 50%
+  border: 2px solid #A0B0C8
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: border-color 0.15s
+  &::after
+    content: ''
+    display: block
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    background: transparent
+    transition: background 0.15s
+
+.radioSelected
+  border-color: #526179
+  &::after
+    background: #526179
+
+// ========================
+// CHECKBOX OPTIONS
+// ========================
+.checkboxGrid
+  display: grid
+  grid-template-columns: 430px 430px
+  gap: 24px 0
+  justify-content: space-between
+  @media (max-width: 640px)
+    grid-template-columns: 1fr
+    gap: 16px
+
+.checkboxItem
+  display: flex
+  align-items: center
+  gap: 12px
+  cursor: pointer
+  font-size: 18px
+  color: #2F394D
+  user-select: none
+  line-height: 100%
+  font-family: var(--font-cygre-medium)
+  @media (max-width: 640px)
+    font-size: 15px
+
+.checkbox
+  width: 30px
+  height: 30px
+  min-width: 30px
+  border-radius: 7px
+  border: 2px solid #A0B0C8
+  background: transparent
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all 0.15s
+  &::after
+    content: ''
+    display: block
+    width: 7px
+    height: 14px
+    border-right: 2.5px solid transparent
+    border-bottom: 2.5px solid transparent
+    transform: rotate(45deg) translate(-1px, -2px)
+    transition: border-color 0.15s
+
+.checkboxChecked
+  border-color: #526179
+  background: #526179
+  &::after
+    border-right-color: #FFFFFF
+    border-bottom-color: #FFFFFF
+
+// ========================
+// TEXT INPUT
+// ========================
+.textInput
+  width: 100%
+  height: 84px
+  border: none
+  border-radius: 25px
+  background: rgba(255, 255, 255, 0.72)
+  padding: 0 22px 8px
+  font-size: 18px
+  font-weight: 500
+  color: #2F394D
+  outline: none
+  background: #A0B0C808
+  font-family: var(--font-cygre-medium)
+  box-shadow: 0px -4px 6px 0px #A0B0C833 inset, 8px 8px 20px 0px #FFFFFFB2 inset
+  @media (max-width: 640px)
+    height: 64px
+    font-size: 16px
+    border-radius: 18px
+
+  &::placeholder
+    color: #A0B0C8
+    font-family: var(--font-cygre-medium)
+    font-size: 18px
+    @media (max-width: 640px)
+      font-size: 16px
+
+
+// ========================
+// CONTACT STEP
+// ========================
+.contactWrapper
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.contactTabs
+  display: flex
+  gap: 12px
+
+.contactTab
+  display: flex
+  align-items: center
+  gap: 9px
+  padding: 10px 18px
+  border: 1.5px solid #C5D3E0
+  border-radius: 9999px
+  background: rgba(255, 255, 255, 0.45)
+  cursor: pointer
+  font-size: 16px
+  color: #2F394D
+  font-family: var(--font-cygre-medium)
+  transition: border-color 0.15s, background 0.15s
+  &:hover
+    border-color: #8FA3B8
+
+  @media (max-width: 640px)
+    font-size: 14px
+    .icon
+      display: none
+
+.contactTabSelected
+  border-color: #526179
+  background: rgba(255, 255, 255, 0.75)
+
+// ========================
+// FOOTER
+// ========================
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 30px
+  @media (max-width: 640px)
+    margin-top: 24px
+
+.backBtn
+  @extend.nextBtn
+
+.backBtnHidden
+  visibility: hidden
+
+.nextBtn
+  background: none
+  border: none
+  cursor: pointer
+  font-size: 24px
+  color: #526179
+  font-family: var(--font-cygre-medium)
+  padding: 0
+  @media (max-width: 640px)
+    font-size: 18px
+
+.submitBtn
+  background: #2F394D
+  color: #FFFFFF
+  border: none
+  border-radius: 9999px
+  padding: 13px 30px
+  font-size: 18px
+  font-family: var(--font-cygre-semibold)
+  cursor: pointer
+  @media (max-width: 640px)
+    font-size: 16px
+    padding: 11px 24px

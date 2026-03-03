@@ -1,0 +1,35 @@
+.accordion
+  padding: 0 30px
+
+.header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  height: 84px
+  cursor: pointer
+  padding-top: 10px
+  padding-bottom: 10px
+  @media (min-width: 640px)
+    padding-top: 0
+    padding-bottom: 0
+
+.title
+  font-family: var(--font-cygre-semibold)
+  font-size: 16px
+  max-width: 1000px
+  @media (min-width: 640px)
+    font-size: 22px
+
+.icon
+  flex-shrink: 0
+
+.content
+  overflow: clip
+
+.description
+  font-family: var(--font-cygre-medium)
+  font-size: 14px
+  padding-bottom: 30px
+  @media (min-width: 640px)
+    font-size: 18px

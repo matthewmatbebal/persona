@@ -1,0 +1,31 @@
+.header
+  position: sticky
+  top: 0
+  display: flex
+  justify-content: center
+  width: 100%
+  padding: 19px 19px 19px 17px
+  height: auto
+  background: linear-gradient(to top, #627189, #52617a)
+  z-index: 99
+  @media (min-width: 640px)
+    height: 104px
+    padding: 20px
+
+.inner
+  display: flex
+  justify-content: space-between
+  width: 100%
+  max-width: 1650px
+  color: #F2F5FA
+
+.nav
+  display: none
+  flex-direction: row
+  align-items: center
+  font-family: var(--font-cygre-medium)
+  font-size: 24px
+  gap: 24px
+  height: 60px
+  @media (min-width: 768px)
+    display: flex

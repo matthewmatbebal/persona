@@ -1,0 +1,37 @@
+.button
+  cursor: pointer
+  white-space: nowrap
+  color: #FFFFFF
+  display: block
+  width: fit-content
+  border-radius: 9999px
+  font-family: var(--font-cygre-semibold)
+  box-shadow: 0px 4px 4px 0px #00000059
+  border: none
+  transition: box-shadow 0.2s ease-in-out
+
+  &:hover
+    box-shadow: 0 2px 2px 0 #00000059
+
+.dark
+  background-color: #2F394D
+
+.primary
+  background-color: #90B1DE
+
+.sm
+  padding: 12px 24px
+  font-size: 18px
+  @media (min-width: 640px)
+    font-size: 22px
+
+.md
+  padding: 16px 32px
+  font-size: 18px
+  @media (min-width: 640px)
+    padding: 16px 40px
+    font-size: 22px
+
+.inner
+  display: block
+  margin-top: -4px
