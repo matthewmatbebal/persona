@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from 'next/font/local'
+import { Roboto } from 'next/font/google'
 import { ToastProvider } from './components/toast/toast'
 
-const cygreSemibold = localFont({
-    src: './fonts/Cygre/Cygre-SemiBold.ttf',
-    variable: '--font-cygre-semibold'
-});
-
-const cygreMedium = localFont({
-    src: './fonts/Cygre/Cygre-Medium.ttf',
-    variable: '--font-cygre-medium'
+const roboto = Roboto({
+    subsets: ['latin', 'cyrillic'],
+    weight: ['300', '400', '500', '600', '700', '800', '900'],
+    variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
@@ -21,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
-            <body className={`${cygreSemibold.variable} ${cygreMedium.variable}`}>
+            <body className={roboto.variable}>
                 <ToastProvider>
                     {children}
                 </ToastProvider>

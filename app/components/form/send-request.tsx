@@ -6,9 +6,12 @@ import Input from "../input/input";
 import styles from "./send-request.module.sass";
 import { sendEmail } from "@/app/actions/send-email";
 import { useToast } from "../toast/toast";
+import ConsentCheckboxes from "../consent-checkboxes/consent-checkboxes";
 
 export default function SendRequestForm() {
     const [loading, setLoading] = useState(false);
+    const [consentPersonal, setConsentPersonal] = useState(false);
+    const [consentMarketing, setConsentMarketing] = useState(false);
     const { showToast } = useToast();
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -27,6 +30,8 @@ export default function SendRequestForm() {
         if (result.success) {
             showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
             formRef.current?.reset();
+            setConsentPersonal(false);
+            setConsentMarketing(false);
         } else {
             showToast(result.error ?? 'Ошибка отправки', 'error');
         }
@@ -58,10 +63,15 @@ export default function SendRequestForm() {
                 title="Ваш телефон"
                 placeholder="Введите ваш номер телефона"
             />
-            <Button variant="dark" size="md" className={styles.submitBtn} type="submit" disabled={loading}>
+            <ConsentCheckboxes
+                consentPersonal={consentPersonal}
+                onConsentPersonalChange={setConsentPersonal}
+                consentMarketing={consentMarketing}
+                onConsentMarketingChange={setConsentMarketing}
+            />
+            <Button variant="dark" size="md" className={styles.submitBtn} type="submit" disabled={loading || !consentPersonal || !consentMarketing}>
                 {loading ? 'Отправка...' : 'Отправить'}
             </Button>
-            <p className={styles.agreement}>Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
         </form>
     );
 }

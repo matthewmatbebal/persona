@@ -1,11 +1,12 @@
 'use server'
 
+import { ReactNode } from "react";
 import SelectServiceButton from "../button/buttons/select-service";
 import styles from "./service-card.module.sass";
 
 interface IServiceCard {
     number: '01'|'02'|'03'|'04'|'05'
-    title: string
+    title: ReactNode
     description: string
     className?: string
 }

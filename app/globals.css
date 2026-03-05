@@ -9,7 +9,8 @@
 body {
   background: #fafbfd;
   color: #2F394D;
-  font-family: var(--font-cygre-medium);
+  font-family: var(--font-roboto);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

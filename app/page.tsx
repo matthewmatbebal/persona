@@ -73,15 +73,15 @@ export default async function Landing() {
                             </div>
                             <ul className={styles.servicesUl}>
                                 <li><span>Политика по обработке персональных данных</span></li>
-                                <li><span>Локальные акты и инструкции</span></li>
-                                <li><span>Отправка уведомлений в Роскомнадзор</span></li>
+                                <li><span>Внутренние документы на сотрудников и инструкции</span></li>
+                                <li><span>Регистрация оператора персональных данных в Роскомнадзоре</span></li>
                                 <li><span>Согласие на обработку персональных данных</span></li>
                             </ul>
                         </div>
                     </div>
                     <div className={styles.servicesButtons}>
-                        <Link href="#contact"><Button variant="dark" size="md">Оставить заявку</Button></Link>
                         <CalculateButton/>
+                        <Link href="#contact"><Button variant="primary" size="md">Рассчитать стоимость услуг </Button></Link>
                     </div>
                 </div>
             </div>
@@ -99,32 +99,32 @@ export default async function Landing() {
                 <div className={styles.servicesGrid}>
                     <ServiceCard
                         number="01"
-                        title="Регистрация ООО, ИП, СЗ в Роскомнадзоре"
-                        description="Проведем официальную регистрацию компании, ИП или самозанятого в реестре операторов персональных данных. Подадим уведомление в Роскомнадзор за вас. Быстро, корректно и без бюрократии"
+                        title="Регистрация ООО, ИП, Самозанятого в Роскомнадзоре"
+                        description="Проведем официальную регистрацию компании, ИП или самозанятого в реестре операторов персональных данных. Подадим уведомление в РКН за Вас в кратчайшие сроки."
                     />
                     <ServiceCard
                         number="02"
-                        title="Документация по 152-ФЗ «О персональных данных»"
-                        description="Разработаем полный комплект внутренней документации в соответствии с законом №152-ФЗ: политика конфиденциальности, согласия, положения и инструкции. Всё готово к проверке."
+                        title={<>Документация по 152-ФЗ<br />«О персональных данных»</>}
+                        description="Разработаем полный комплект документации в соответствии с законом №152-ФЗ: внутренние документы, документация для Вашего сайта/бота/социальной сети. Всё готово к проверке."
                         className={styles.card02}
                     />
                     <div className={styles.card03Container}>
                         <ServiceCard
                             number="03"
-                            title="Юридический анализ Вашего сайта"
-                            description="Проведем комплексную проверку сайта на соответствие требованиям 152-ФЗ. Выявим нарушения, дадим рекомендации и доработаем тексты. Поможем снизить юридические риски."
+                            title="Юридический анализ Вашего сайта/бота/социальной сети"
+                            description="Проведем комплексную проверку сайта на соответствие требованиям 152-ФЗ. Выявим нарушения, дадим рекомендации и доработаем тексты. Поможем исключить юридические риски."
                         />
                     </div>
                     <ServiceCard
                         number="04"
                         title="Подготовка к проверке Роскомнадзора"
-                        description="Проведем официальную регистрацию компании, ИП или самозанятого в реестре операторов персональных данных. Подадим уведомление в Роскомнадзор за вас. Быстро, корректно и без бюрократии"
+                        description="Проведем комплексную проверку Вашего бизнеса. Поможем подготовиться к визиту Роскомнадзора и избежать штрафов за нарушения по 152-ФЗ. Проверим сайт, документы и процессы, выстроим систему защиты персональных данных в организации под ключ."
                     />
                     <div className={`${styles.card05Container} after-rounding-block`}>
                         <ServiceCard
                             number="05"
                             title="Ответ на предписания и требования Роскомнадзора"
-                            description="Проведем официальную регистрацию компании, ИП или самозанятого в реестре операторов персональных данных. Подадим уведомление в Роскомнадзор за вас. Быстро, корректно и без бюрократии"
+                            description="Подготовим юридически обоснованный ответ на предписание Роскомнадзора. Разберём требования, сформулируем корректные пояснения, подготовим все необходимые документы. Поможем избежать штрафов."
                         />
                     </div>
                 </div>
@@ -138,7 +138,7 @@ export default async function Landing() {
                     />
                     <ServiceCard
                         number="02"
-                        title="Документация по 152-ФЗ «О персональных данных»"
+                        title={<>Документация по 152-ФЗ<br />«О персональных данных»</>}
                         description="Разработаем полный комплект внутренней документации в соответствии с законом №152-ФЗ: политика конфиденциальности, согласия, положения и инструкции. Всё готово к проверке."
                     />
                     <ServiceCard
@@ -168,8 +168,8 @@ export default async function Landing() {
                     <p className={styles.shadowMobileTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ "О персональных данных"</p>
                 </div>
                 <div className={styles.shadowCol}>
-                    <ShadowCard title="Уведомление Роскомнадзора" icon="/icons/cowbell.svg" rounding="top"/>
-                    <ShadowCard title="Политика в области обработки ПДн" icon="/icons/doc.svg" rounding="bottom"/>
+                    <ShadowCard title="Согласие на обработку персональных данных" icon="/icons/cowbell.svg" rounding="top"/>
+                    <ShadowCard title="Назначение ответственного" icon="/icons/doc.svg" rounding="bottom"/>
                 </div>
                 <div className={styles.shadowColCenter}>
                     <ShadowCard title="Уведомление Роскомнадзора" icon="/icons/persons.svg" rounding="full"/>
@@ -177,11 +177,11 @@ export default async function Landing() {
                         <h3 className={styles.shadowDesktopTitleH3}>Необходимое для операторов данных</h3>
                         <p className={styles.shadowDesktopTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ "О персональных данных"</p>
                     </div>
-                    <ShadowCard title="Политика в области обработки ПДн" icon="/icons/person.svg" rounding="full"/>
+                    <ShadowCard title="Сообщение о трансграничной передаче данных" icon="/icons/person.svg" rounding="full"/>
                 </div>
                 <div className={styles.shadowCol}>
-                    <ShadowCard title="Уведомление Роскомнадзора" icon="/icons/phone.svg" rounding="top"/>
-                    <ShadowCard title="Политика в области обработки ПДн" icon="/icons/layers.svg" rounding="bottom"/>
+                    <ShadowCard title="Политика в области обработки ПДн" icon="/icons/phone.svg" rounding="top"/>
+                    <ShadowCard title="Внутренний комплект документов" icon="/icons/layers.svg" rounding="bottom"/>
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ export default async function Landing() {
                     <div className={styles.problemsFirstCard}>
                         <ProblemCard
                             title="Штрафы"
-                            description={['Для юр. лиц - до 300 тыс. руб.', 'Для ИП - до 50 тыс. руб.']}
+                            description={['Для юр. лиц - до 1,5 млн. руб.', 'Для ИП - до 500 тыс. руб.']}
                             href="#"
                             icon="debit-card"
                         />
@@ -286,12 +286,10 @@ export default async function Landing() {
                     <NumberCard
                         number="05"
                         title="Поддержка и защита"
-                        description="Консультируем по вопросам, которые могут возникнуть у регуляторов."
+                        description="Консультируем по вопросам, которые могут возникнуть у инспекторов."
                     />
                 </div>
-                <Link href="#contact">
-                    <Button variant="primary" size="sm" className={styles.startButton}>Начать работу</Button>
-                </Link>
+                <CalculateButton variant="primary" size="sm" className={styles.startButton}>Начать работу</CalculateButton>
             </div>
         </div>
 

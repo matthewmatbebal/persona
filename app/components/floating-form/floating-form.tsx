@@ -5,11 +5,14 @@ import Button from "../button/button";
 import styles from "./floating-form.module.sass";
 import { sendEmail } from "@/app/actions/send-email";
 import { useToast } from "../toast/toast";
+import ConsentCheckboxes from "../consent-checkboxes/consent-checkboxes";
 
 export default function FloatingForm() {
     const [isVisible, setIsVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);
+    const [consentPersonal, setConsentPersonal] = useState(false);
+    const [consentMarketing, setConsentMarketing] = useState(false);
     const { showToast } = useToast();
 
     useEffect(() => {
@@ -79,12 +82,15 @@ export default function FloatingForm() {
                     name="email"
                     placeholder="name@mail.ru"
                 />
-                <Button variant="dark" size="md" className={styles.btn} type="submit" disabled={loading}>
+                <ConsentCheckboxes
+                    consentPersonal={consentPersonal}
+                    onConsentPersonalChange={setConsentPersonal}
+                    consentMarketing={consentMarketing}
+                    onConsentMarketingChange={setConsentMarketing}
+                />
+                <Button variant="dark" size="md" className={styles.btn} type="submit" disabled={loading || !consentPersonal || !consentMarketing}>
                     {loading ? 'Отправка...' : 'Отправить'}
                 </Button>
-                <p className={styles.agreement}>
-                    Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
-                </p>
             </form>
         </div>
     );

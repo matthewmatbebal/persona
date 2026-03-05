@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from './quiz-modal.module.sass'
 import { sendEmail } from '@/app/actions/send-email'
 import { useToast } from '@/app/components/toast/toast'
+import ConsentCheckboxes from '@/app/components/consent-checkboxes/consent-checkboxes'
 
 interface QuizModalProps {
     onClose: () => void
@@ -16,8 +17,6 @@ const SERVICES = [
     'Подготовка документации по ФЗ-152 «О Персональных данных»',
     'Аудит сайта на соответствие ФЗ-152 «О персональных данных»',
     'Аудит записи о регистрации в реестре Роскомнадзора с внесением изменений',
-    'Аудит внутренней документации организации с внесением изменений',
-    'Уведомление о трансграничной передаче данных',
     'Подготовка к проверке от Роскомнадзора',
     'Подготовка ответов на предписание/требования Роскомнадзора',
 ]
@@ -46,6 +45,8 @@ export default function QuizModal({ onClose }: QuizModalProps) {
     const [services, setServices] = useState<string[]>([])
     const [contactMethod, setContactMethod] = useState<string>('Телефон')
     const [contactValue, setContactValue] = useState<string>('')
+    const [consentPersonal, setConsentPersonal] = useState(false)
+    const [consentMarketing, setConsentMarketing] = useState(false)
 
     const handleClose = () => {
         setStep(0)
@@ -57,6 +58,8 @@ export default function QuizModal({ onClose }: QuizModalProps) {
         setServices([])
         setContactMethod('Телефон')
         setContactValue('')
+        setConsentPersonal(false)
+        setConsentMarketing(false)
         onClose()
     }
 
@@ -231,6 +234,12 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                             value={contactValue}
                             onChange={e => setContactValue(e.target.value)}
                         />
+                        <ConsentCheckboxes
+                            consentPersonal={consentPersonal}
+                            onConsentPersonalChange={setConsentPersonal}
+                            consentMarketing={consentMarketing}
+                            onConsentMarketingChange={setConsentMarketing}
+                        />
                     </div>
                 )}
             </div>
@@ -254,7 +263,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                 ) : (
                     <button
                         className={styles.submitBtn}
-                        disabled={submitting}
+                        disabled={submitting || !consentPersonal || !consentMarketing}
                         onClick={async () => {
                             setSubmitting(true)
                             const result = await sendEmail({
