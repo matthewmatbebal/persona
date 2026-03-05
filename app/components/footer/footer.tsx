@@ -26,8 +26,15 @@ export default async function Footer() {
                         <div>mailmail@mail.ru</div>
                     </div>
                 </div>
+                <div className={styles.links}>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Политика обработки персональных данных</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Политика использования файлов cookie</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Согласие на получение рассылки</a>
+                </div>
                 <div className={styles.bottom}>
-                    ©ООО Персонта. ИНН 0000000000 ОГРН 000000000000. Все права защищены
+                    <span>©ООО Персонта. ИНН 0000000000 ОГРН 000000000000. Все права защищены.</span>
+                    <span>Не является публичной офертой</span>
                 </div>
             </div>
         </footer>

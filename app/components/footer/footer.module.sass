@@ -63,14 +63,40 @@
     font-size: 14px
     line-height: 1.5
 
+.links
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 8px 24px
+  padding: 20px 0 16px
+  border-top: 1px solid #A0B0C866
+
+  a
+    font-size: 14px
+    line-height: 1.5
+    color: #526179
+    text-decoration: underline
+    font-family: var(--font-roboto)
+    &:hover
+      color: #2F394D
+
+  @media (max-width: 640px)
+    gap: 6px 16px
+    padding: 16px 0 12px
+    a
+      font-size: 12px
+
 .bottom
   display: flex
   color: #526179
   justify-content: center
+  gap: 8px
   font-size: 16px
   line-height: 1.5
 
   @media (max-width: 640px)
+    flex-direction: column
+    align-items: center
     font-size: 10px
     line-height: 1.4
-    padding-top: 25px
+    padding-top: 8px

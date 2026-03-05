@@ -1,0 +1,47 @@
+.banner
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1100
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 24px
+  padding: 20px 40px
+  background: #2F394D
+  color: #F2F5FA
+  font-family: var(--font-roboto)
+
+  @media (max-width: 640px)
+    flex-direction: column
+    gap: 16px
+    padding: 16px 20px
+
+.text
+  font-size: 14px
+  line-height: 1.5
+  max-width: 800px
+  margin: 0
+
+  a
+    color: #F2F5FA
+    text-decoration: underline
+    &:hover
+      color: #FFFFFF
+
+.acceptBtn
+  background: #FFFFFF
+  color: #2F394D
+  border: none
+  border-radius: 9999px
+  padding: 10px 28px
+  font-size: 15px
+  font-family: var(--font-roboto)
+  font-weight: 500
+  cursor: pointer
+  white-space: nowrap
+  transition: opacity 0.2s
+
+  &:hover
+    opacity: 0.85

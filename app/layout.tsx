@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from 'next/font/google'
 import { ToastProvider } from './components/toast/toast'
+import CookieBanner from './components/cookie-banner/cookie-banner'
 
 const roboto = Roboto({
     subsets: ['latin', 'cyrillic'],
@@ -20,6 +21,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
             <body className={roboto.variable}>
                 <ToastProvider>
                     {children}
+                    <CookieBanner />
                 </ToastProvider>
             </body>
         </html>
