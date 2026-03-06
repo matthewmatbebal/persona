@@ -22,8 +22,8 @@ export default async function Footer() {
                     </div>
                     <div className={styles.contacts}>
                         <div>Контакты:</div>
-                        <div>+7 (000)-000-00-00</div>
-                        <div>mailmail@mail.ru</div>
+                        <div>+79186810978</div>
+                        <div>personta.info@yandex.ru</div>
                     </div>
                 </div>
                 <div className={styles.links}>
@@ -32,9 +32,11 @@ export default async function Footer() {
                     <a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>
                     <a href="#" target="_blank" rel="noopener noreferrer">Согласие на получение рассылки</a>
                 </div>
+                <p className={styles.disclaimer}>
+                    Вся информация на сайте носит информационный характер и не является публичной офертой (ст. 437 ГК РФ). Стоимость и состав услуг определяются индивидуально и уточняются до момента оплаты. Услуги оказываются на основании договора-оферты. Оплата означает согласие с её условиями. Обработка персональных данных осуществляется в соответствии с действующим законодательством.
+                </p>
                 <div className={styles.bottom}>
-                    <span>©ООО Персонта. ИНН 0000000000 ОГРН 000000000000. Все права защищены.</span>
-                    <span>Не является публичной офертой</span>
+                    ©ИП Нестеров А.А. ИНН 0000000000. Все права защищены.
                 </div>
             </div>
         </footer>

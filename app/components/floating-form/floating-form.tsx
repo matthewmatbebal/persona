@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Button from "../button/button";
 import styles from "./floating-form.module.sass";
 import { sendEmail } from "@/app/actions/send-email";
@@ -13,24 +13,41 @@ export default function FloatingForm() {
     const [loading, setLoading] = useState(false);
     const [consentPersonal, setConsentPersonal] = useState(false);
     const [consentMarketing, setConsentMarketing] = useState(false);
+    const [bottomOffset, setBottomOffset] = useState(40);
     const { showToast } = useToast();
+    const elRef = useRef<HTMLDivElement | HTMLButtonElement>(null);
+
+    const updatePosition = useCallback(() => {
+        const footer = document.querySelector('footer');
+        if (!footer) return;
+        const footerTop = footer.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight;
+        const isMobile = window.innerWidth <= 640;
+        const minGap = isMobile ? 20 : 100;
+        if (footerTop < viewportHeight) {
+            setBottomOffset(viewportHeight - footerTop + minGap);
+        } else {
+            setBottomOffset(40);
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY >= 400 && !isVisible) {
                 setIsVisible(true);
             }
+            updatePosition();
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [isVisible]);
+    }, [isVisible, updatePosition]);
 
     if (!isVisible) return null;
 
     if (!isOpen) {
         return (
-            <button className={styles.questionBtn} onClick={() => setIsOpen(true)} aria-label="Открыть форму заявки">
+            <button className={styles.questionBtn} style={{ bottom: bottomOffset }} onClick={() => setIsOpen(true)} aria-label="Открыть форму заявки">
                 <span>?</span>
             </button>
         );
@@ -56,7 +73,7 @@ export default function FloatingForm() {
     };
 
     return (
-        <div className={styles.popup}>
+        <div className={styles.popup} style={{ bottom: bottomOffset }}>
             <div className={styles.header}>
                 <h3 className={styles.title}>Оформить заявку на услуги</h3>
                 <button className={styles.closeBtn} onClick={() => setIsOpen(false)} aria-label="Закрыть">

@@ -14,6 +14,7 @@ import Input from "./components/input/input";
 import SendRequestForm from "./components/form/send-request";
 import Footer from "./components/footer/footer";
 import CalculateButton from "./components/button/buttons/calculate";
+import RequestButton from "./components/button/buttons/request";
 import FloatingForm from "./components/floating-form/floating-form";
 import styles from "./page.module.sass";
 
@@ -80,8 +81,8 @@ export default async function Landing() {
                         </div>
                     </div>
                     <div className={styles.servicesButtons}>
-                        <CalculateButton/>
-                        <Link href="#contact"><Button variant="primary" size="md">Рассчитать стоимость услуг </Button></Link>
+                        <RequestButton variant="dark" />
+                        <CalculateButton variant="primary">Рассчитать стоимость услуг</CalculateButton>
                     </div>
                 </div>
             </div>
