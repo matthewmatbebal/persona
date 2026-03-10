@@ -5,7 +5,7 @@ import SelectServiceButton from "../button/buttons/select-service";
 import styles from "./service-card.module.sass";
 
 interface IServiceCard {
-    number: '01'|'02'|'03'|'04'|'05'
+    number: '01'|'02'|'03'|'04'|'05'|'06'
     title: ReactNode
     description: string
     className?: string
@@ -17,6 +17,7 @@ const numbers = {
     '03': { width: 98 },
     '04': { width: 101 },
     '05': { width: 98 },
+    '06': { width: 101 },
 }
 
 export default async function ServiceCard({number, title, description, className}:IServiceCard) {
