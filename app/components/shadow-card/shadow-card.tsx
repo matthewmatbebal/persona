@@ -1,10 +1,11 @@
 'use server'
 
+import { ReactNode } from "react";
 import Image from "next/image";
 import styles from "./shadow-card.module.sass";
 
 interface IShadowCard {
-    title: string
+    title: ReactNode
     icon: string
     rounding: "top"|"bottom"|"full"
 }

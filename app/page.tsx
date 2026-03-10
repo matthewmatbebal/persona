@@ -11,11 +11,11 @@ import Arrow from "./components/arrow/arrow";
 import Accordion from "./components/accordion/accordion";
 import AccordionContainer from "./components/accordion/accordion-container";
 import Input from "./components/input/input";
-import SendRequestForm from "./components/form/send-request";
 import Footer from "./components/footer/footer";
 import CalculateButton from "./components/button/buttons/calculate";
 import RequestButton from "./components/button/buttons/request";
 import FloatingForm from "./components/floating-form/floating-form";
+import ReviewsSlider from "./components/reviews-slider/reviews-slider";
 import styles from "./page.module.sass";
 
 export default async function Landing() {
@@ -76,7 +76,7 @@ export default async function Landing() {
                                 <li><span>Политика по обработке персональных данных</span></li>
                                 <li><span>Внутренние документы на сотрудников и инструкции</span></li>
                                 <li><span>Регистрация оператора персональных данных в Роскомнадзоре</span></li>
-                                <li><span>Согласие на обработку персональных данных</span></li>
+                                <li><span><a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a></span></li>
                             </ul>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ export default async function Landing() {
                     <p className={styles.shadowMobileTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ "О персональных данных"</p>
                 </div>
                 <div className={styles.shadowCol}>
-                    <ShadowCard title="Согласие на обработку персональных данных" icon="/icons/cowbell.svg" rounding="top"/>
+                    <ShadowCard title={<a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>} icon="/icons/cowbell.svg" rounding="top"/>
                     <ShadowCard title="Назначение ответственного" icon="/icons/doc.svg" rounding="bottom"/>
                 </div>
                 <div className={styles.shadowColCenter}>
@@ -331,22 +331,8 @@ export default async function Landing() {
 
         {/* CONTACT */}
         <div id="contact" className={styles.contactSection}>
-            <div className={styles.contactInner}>
-                <div className={styles.contactLeft}>
-                    <h3 className={styles.contactTitle}>Остались вопросы?</h3>
-                    <p className={styles.contactSubtitle}>Оставьте завку и мы свяжемся с Вами для проведения бесплатной консультации</p>
-                    <div className={styles.contactRobotRow}>
-                        <Image
-                            src="/robot.svg"
-                            alt="robot"
-                            width={372}
-                            height={354}
-                            className={styles.contactRobot}
-                        />
-                        <p className={styles.contactCallHours}>Время работы колл-центра: 10:00 - 19:00</p>
-                    </div>
-                </div>
-                <SendRequestForm/>
+            <div className={styles.reviewsInner}>
+                <ReviewsSlider />
             </div>
         </div>
 
