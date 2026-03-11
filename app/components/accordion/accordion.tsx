@@ -2,37 +2,25 @@
 
 import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image";
-import { useState } from "react";
 import styles from "./accordion.module.sass";
 
 interface IAccordion {
     title: string
     description: string
     className?: string
-    isOpened?: boolean
+    isOpen: boolean
+    onToggle: () => void
 }
 
-export default function Accordion({title, description, className, isOpened}:IAccordion) {
-    const [isOpenedState, setIsOpenedState] = useState(Boolean(isOpened));
-    const [isOpen, setIsOpen] = useState(isOpenedState);
-    const [rotate, setRotate] = useState(isOpenedState ? 45 : 0)
-
-    const onClick = () => {
-        if (isOpenedState) {
-            setIsOpenedState(false);
-        }
-        setRotate(isOpen ? 0 : 45)
-        setIsOpen((prev) => !prev)
-    }
-
+export default function Accordion({title, description, className, isOpen, onToggle}:IAccordion) {
     return (
         <div className={`${styles.accordion} ${className ?? ''}`}>
-            <div onClick={onClick} className={styles.header}>
+            <div onClick={onToggle} className={styles.header}>
                 <div className={styles.title}>{title}</div>
                 <AnimatePresence>
                     <motion.div
-                        initial={{rotate}}
-                        animate={{rotate}}
+                        initial={{rotate: isOpen ? 45 : 0}}
+                        animate={{rotate: isOpen ? 45 : 0}}
                         transition={{ type: "spring", stiffness: 200 }}
                         className={styles.icon}
                     >
@@ -47,7 +35,7 @@ export default function Accordion({title, description, className, isOpened}:IAcc
             </div>
             <AnimatePresence>
                 {isOpen && <motion.div
-                    initial={{ opacity: isOpenedState ? 1 : 0, height: isOpenedState ? 'auto' : 0 }}
+                    initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{

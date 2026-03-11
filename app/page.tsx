@@ -176,7 +176,7 @@ export default async function Landing() {
             <div className={styles.shadowInner}>
                 <div className={styles.shadowMobileTitle}>
                     <h3 className={styles.shadowMobileTitleH3}>Необходимое для операторов данных</h3>
-                    <p className={styles.shadowMobileTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ "О персональных данных"</p>
+                    <p className={styles.shadowMobileTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ <br/> "О персональных данных"</p>
                 </div>
                 <div className={styles.shadowCol}>
                     <ShadowCard title={<a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>} icon="/icons/cowbell.svg" rounding="top"/>
@@ -186,7 +186,7 @@ export default async function Landing() {
                     <ShadowCard title="Уведомление Роскомнадзора" icon="/icons/persons.svg" rounding="full"/>
                     <div className={styles.shadowDesktopTitle}>
                         <h3 className={styles.shadowDesktopTitleH3}>Необходимое для операторов данных</h3>
-                        <p className={styles.shadowDesktopTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ "О персональных данных"</p>
+                        <p className={styles.shadowDesktopTitleP}>Базовый, но ключевой минимум для соответствия закону №152-ФЗ <br/> "О персональных данных"</p>
                     </div>
                     <ShadowCard title="Сообщение о трансграничной передаче данных" icon="/icons/person.svg" rounding="full"/>
                 </div>
@@ -273,31 +273,31 @@ export default async function Landing() {
                     <NumberCard
                         number="01"
                         title="Консультация и анализ"
-                        description="Обсуждаем вашу ситуацию, определяем объем работ."
+                        description="Обсуждаем вашу ситуацию, определяем объем работ"
                     />
                     <Arrow/>
                     <NumberCard
                         number="02"
                         title="Глубокий аудит"
-                        description="Эксперты проверяют вашу ИТ-инфраструктуру и средства защиты."
+                        description="Эксперты проверяют вашу ИТ-инфраструктуру и средства защиты"
                     />
                     <Arrow/>
                     <NumberCard
                         number="03"
-                        title="Заключение и дорожная карта"
-                        description="Вы получаете отчёт с приоритизированным списком действий."
+                        title="Разработка индивидуального плана действий"
+                        description="Вы получаете пошаговый план по дальнейшим работам"
                     />
                     <Arrow/>
                     <NumberCard
                         number="04"
                         title="Приведение документации в порядок"
-                        description="Разрабатываем документы, даём инструкции разработчикам"
+                        description="Разрабатываем документы, консультируем сотрудников, даем инструкции по работе с работе с ПДн"
                     />
                     <Arrow/>
                     <NumberCard
                         number="05"
                         title="Поддержка и защита"
-                        description="Консультируем по вопросам, которые могут возникнуть у инспекторов."
+                        description="Сопровождаем Вас при проверках со стороны РКН, отвечаем на вопросы ведомственных структур"
                     />
                 </div>
                 <CalculateButton variant="primary" size="sm" className={styles.startButton}>Начать работу</CalculateButton>
