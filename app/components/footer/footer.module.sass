@@ -17,32 +17,6 @@
   display: flex
   justify-content: space-between
 
-  .elemRow
-    display: flex
-    justify-content: center
-    gap: 20px
-
-    .elem
-      width: 50px
-      height: 50px
-      display: flex
-      align-items: center
-      justify-content: center
-      border-radius: 50%
-      background-color: #A0B0C8
-      color: #080B36
-
-      @media (max-width: 640px)
-        width: 40px
-        height: 40px
-
-      span
-        padding-bottom: 4px
-
-        @media (max-width: 640px)
-          font-size: 14px
-          line-height: 1.5
-
 .logoWrapper
   display: none
   @media (min-width: 640px)
@@ -68,8 +42,10 @@
   flex-wrap: wrap
   justify-content: center
   gap: 8px 24px
-  padding: 20px 0 16px
-  border-top: 1px solid #A0B0C866
+  padding: 20px 0 4px
+  border-bottom: 1px solid #A0B0C866
+  @media (max-width: 640px)
+    padding-top: 0
 
   a
     font-size: 14px
@@ -81,8 +57,6 @@
       color: #2F394D
 
   @media (max-width: 640px)
-    gap: 6px 16px
-    padding: 16px 0 12px
     a
       font-size: 12px
 
@@ -94,10 +68,12 @@
   text-align: center
   margin: 0
   padding-bottom: 12px
+  padding-top: 32px
 
   @media (max-width: 640px)
     font-size: 10px
     line-height: 1.4
+    padding-top: 24px
 
 .bottom
   display: flex
