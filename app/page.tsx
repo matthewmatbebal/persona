@@ -27,10 +27,10 @@ export default async function Landing() {
                 <div className={styles.heroInner}>
                     <div className={styles.heroContent}>
                         <h1 className={styles.heroTitleDesktop}>
-                            Разработка документации по ФЗ-152 "О персональных данных"
+                            <span className={styles.cygreText}>Разработка документации по ФЗ-152</span> "О персональных данных"
                         </h1>
                         <h1 className={styles.heroTitleMobile}>
-                            Разработка<br/> документации по ФЗ-152 "О персональных<br/> данных"
+                            <span className={styles.cygreText}>Разработка<br/> документации по ФЗ-152</span> "О персональных<br/> данных"
                         </h1>
                         <p className={styles.heroSubtitle}>
                             Услуги по разработке документации для ИП, ООО,
