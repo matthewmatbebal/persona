@@ -118,7 +118,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                             <div
                                 key={option}
                                 className={`${styles.radioCard} ${orgForm === option ? styles.radioCardSelected : ''}`}
-                                onClick={() => setOrgForm(option)}
+                                onClick={() => { setOrgForm(option); setTimeout(handleNext, 300) }}
                             >
                                 <div className={`${styles.radio} ${orgForm === option ? styles.radioSelected : ''}`} />
                                 {option}
@@ -134,7 +134,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                             <div
                                 key={option}
                                 className={`${styles.radioCard} ${hasEmployees === option ? styles.radioCardSelected : ''}`}
-                                onClick={() => setHasEmployees(option)}
+                                onClick={() => { setHasEmployees(option); setTimeout(handleNext, 300) }}
                             >
                                 <div className={`${styles.radio} ${hasEmployees === option ? styles.radioSelected : ''}`} />
                                 {option}
@@ -150,7 +150,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                             <div
                                 key={option}
                                 className={`${styles.radioCard} ${cloudStorage === option ? styles.radioCardSelected : ''}`}
-                                onClick={() => setCloudStorage(option)}
+                                onClick={() => { setCloudStorage(option); setTimeout(handleNext, 300) }}
                             >
                                 <div className={`${styles.radio} ${cloudStorage === option ? styles.radioSelected : ''}`} />
                                 {option}
@@ -166,7 +166,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                             <div
                                 key={option}
                                 className={`${styles.radioCard} ${hasWebsite === option ? styles.radioCardSelected : ''}`}
-                                onClick={() => setHasWebsite(option)}
+                                onClick={() => { setHasWebsite(option); setTimeout(() => { if (option === 'Нет') setStep(5); else setStep(4) }, 300) }}
                             >
                                 <div className={`${styles.radio} ${hasWebsite === option ? styles.radioSelected : ''}`} />
                                 {option}
