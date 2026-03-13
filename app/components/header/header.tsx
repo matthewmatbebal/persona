@@ -2,6 +2,7 @@
 
 import Logotype from "../logotype/logotype";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./header.module.sass";
 
 export default async function Header() {
@@ -21,14 +22,14 @@ export default async function Header() {
                     {/* Mobile only */}
                     <div className={styles.mobileInfo}>
                         <div className={styles.socialsMobile}>
-                            <a href="#" className={styles.socialLink} aria-label="Telegram">
-                                <span>tg</span>
+                            <a href="https://t.me/PersontaSupport_bot" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Telegram">
+                                <Image src="/icons/telegram-filled.svg" alt="Telegram" width={24} height={24} />
                             </a>
-                            <a href="#" className={styles.socialLink} aria-label="VK">
-                                <span>tg</span>
+                            <a href="tel:+79186810978" className={styles.socialLink} aria-label="Телефон">
+                                <Image src="/icons/phone-header.svg" alt="Телефон" width={24} height={24} />
                             </a>
-                            <a href="#" className={styles.socialLink} aria-label="WhatsApp">
-                                <span>tg</span>
+                            <a href="mailto:personta.info@yandex.ru" className={styles.socialLink} aria-label="Email">
+                                <Image src="/icons/mail-filled.svg" alt="Email" width={24} height={24} />
                             </a>
                         </div>
                         <div className={styles.workHours}>Время работы с 9:00 до 22:00 по МСК</div>
@@ -38,14 +39,14 @@ export default async function Header() {
                     <div className={styles.rightDesktop}>
                         <div className={styles.workHoursDesktop}>Время работы с 9:00 до 22:00 по МСК</div>
                         <div className={styles.socialsDesktop}>
-                            <a href="#" className={styles.socialLink} aria-label="Telegram">
-                                <span>tg</span>
+                            <a href="https://t.me/PersontaSupport_bot" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Telegram">
+                                <Image src="/icons/telegram-filled.svg" alt="Telegram" width={24} height={24} />
                             </a>
-                            <a href="#" className={styles.socialLink} aria-label="VK">
-                                <span>tg</span>
+                            <a href="tel:+79186810978" className={styles.socialLink} aria-label="Телефон">
+                                <Image src="/icons/phone-header.svg" alt="Телефон" width={24} height={24} />
                             </a>
-                            <a href="#" className={styles.socialLink} aria-label="WhatsApp">
-                                <span>tg</span>
+                            <a href="mailto:personta.info@yandex.ru" className={styles.socialLink} aria-label="Email">
+                                <Image src="/icons/mail-filled.svg" alt="Email" width={24} height={24} />
                             </a>
                         </div>
                     </div>
