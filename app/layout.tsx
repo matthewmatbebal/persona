@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import { ToastProvider } from './components/toast/toast'
 import CookieBanner from './components/cookie-banner/cookie-banner'
 
-const roboto = Roboto({
-    subsets: ['latin', 'cyrillic'],
-    weight: ['300', '400', '500', '600', '700', '800', '900'],
-    variable: '--font-roboto',
-});
-
-const cygre = localFont({
+const tildaSans = localFont({
     src: [
-        { path: './fonts/cyrge-test/Cygre-Thin.ttf', weight: '100', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-Light.ttf', weight: '300', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-Regular.ttf', weight: '400', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-Medium.ttf', weight: '500', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-SemiBold.ttf', weight: '600', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-Bold.ttf', weight: '700', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-ExtraBold.ttf', weight: '800', style: 'normal' },
-        { path: './fonts/cyrge-test/Cygre-Black.ttf', weight: '900', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Light/TildaSans-Light.woff2', weight: '300', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Regular/TildaSans-Regular.woff2', weight: '400', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Medium/TildaSans-Medium.woff2', weight: '500', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Semibold/TildaSans-Semibold.woff2', weight: '600', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Bold/TildaSans-Bold.woff2', weight: '700', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-ExtraBold/TildaSans-ExtraBold.woff2', weight: '800', style: 'normal' },
+        { path: './fonts/TildaSans.07Web/TildaSans-Black/TildaSans-Black.woff2', weight: '900', style: 'normal' },
     ],
-    variable: '--font-cygre',
+    variable: '--font-tilda',
 });
 
 export const metadata: Metadata = {
@@ -33,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
-            <body className={`${roboto.variable} ${cygre.variable}`}>
+            <body className={tildaSans.variable}>
                 <ToastProvider>
                     {children}
                     <CookieBanner />
