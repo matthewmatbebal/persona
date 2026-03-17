@@ -213,7 +213,7 @@ export default async function Landing() {
                         <ProblemCard
                             title="Штрафы"
                             description={['Для юр. лиц - до 1,5 млн. руб.', 'Для ИП - до 500 тыс. руб.']}
-                            href="#"
+                            href="/docs/fines.pdf"
                             icon="debit-card"
                         />
                     </div>

@@ -39,7 +39,7 @@ export default async function ProblemCard({title, description, icon="debit-card"
                 : description}
             </div>
             {href && <div className={styles.linkWrapper}>
-                <Link href="#" className={styles.link}>Подробнее → </Link>
+                <Link href={href} className={styles.link} target="_blank" rel="noopener noreferrer">Подробнее → </Link>
             </div>}
         </div>
     );
