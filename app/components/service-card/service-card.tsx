@@ -1,5 +1,3 @@
-'use server'
-
 import { ReactNode } from "react";
 import SelectServiceButton from "../button/buttons/select-service";
 import styles from "./service-card.module.sass";

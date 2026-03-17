@@ -1,5 +1,3 @@
-'use server'
-
 import Logotype from "../logotype/logotype";
 import Link from "next/link";
 import Image from "next/image";

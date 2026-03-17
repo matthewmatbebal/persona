@@ -11,6 +11,9 @@ export default function FloatingForm() {
     const [isVisible, setIsVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);
+    const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [consentPersonal, setConsentPersonal] = useState(false);
     const [consentMarketing, setConsentMarketing] = useState(false);
     const [bottomOffset, setBottomOffset] = useState(40);
@@ -55,13 +58,12 @@ export default function FloatingForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const fd = new FormData(e.currentTarget);
         setLoading(true);
         const result = await sendEmail({
             type: 'floating',
-            phone: fd.get('phone') as string,
-            name: fd.get('name') as string,
-            email: fd.get('email') as string,
+            phone,
+            name,
+            email,
         });
         setLoading(false);
         if (result.success) {
@@ -86,18 +88,24 @@ export default function FloatingForm() {
                     type="tel"
                     name="phone"
                     placeholder="+7 (000) 000-00-00"
+                    value={phone}
+                    onChange={e => setPhone(e.target.value)}
                 />
                 <input
                     className={styles.input}
                     type="text"
                     name="name"
                     placeholder="Иван"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
                 />
                 <input
                     className={styles.input}
                     type="email"
                     name="email"
                     placeholder="name@mail.ru"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
                 />
                 <ConsentCheckboxes
                     consentPersonal={consentPersonal}

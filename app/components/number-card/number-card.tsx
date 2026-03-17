@@ -1,5 +1,3 @@
-'use server'
-
 import Image from "next/image";
 import styles from "./number-card.module.sass";
 

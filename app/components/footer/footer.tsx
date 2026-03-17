@@ -1,5 +1,3 @@
-'use server'
-
 import Logotype from "../logotype/logotype";
 import styles from "./footer.module.sass";
 

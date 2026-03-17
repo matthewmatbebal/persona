@@ -22,17 +22,14 @@ export default function Modal({children, isOpen, onClose}:IModal) {
         return;
     }
 
-    const ModalContainer = () => {
-        return (
-            <AnimatePresence>
-                <motion.div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`} onClick={isOpen ? onClose : undefined}>
-                    {isOpen && <motion.div className={styles.content}>
-                        {children}
-                    </motion.div>}
-                </motion.div>
-            </AnimatePresence>
-        )
-    }
-
-    return createPortal(<ModalContainer/>, document.body);
+    return createPortal(
+        <AnimatePresence>
+            <motion.div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`} onClick={isOpen ? onClose : undefined}>
+                {isOpen && <motion.div className={styles.content} onClick={e => e.stopPropagation()}>
+                    {children}
+                </motion.div>}
+            </motion.div>
+        </AnimatePresence>,
+        document.body
+    );
 }
