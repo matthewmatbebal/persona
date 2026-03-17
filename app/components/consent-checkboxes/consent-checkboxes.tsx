@@ -21,8 +21,12 @@ export default function ConsentCheckboxes({
                     onClick={(e) => { e.preventDefault(); onConsentPersonalChange(!consentPersonal) }}
                 />
                 <span>
-                    Я даю согласие на обработку персональных данных и соглашаюсь с{' '}
-                    <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    Я даю{' '}
+                    <a href="/docs/privacy-agreement.pdf" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                        согласие на обработку персональных данных
+                    </a>{' '}
+                    и соглашаюсь с{' '}
+                    <a href="/docs/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                         Политикой обработки персональных данных
                     </a>
                 </span>
@@ -34,7 +38,7 @@ export default function ConsentCheckboxes({
                 />
                 <span>
                     Я даю{' '}
-                    <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <a href="/docs/ads-agreement.pdf" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                         Согласие на получение информационной и рекламной рассылки
                     </a>
                 </span>

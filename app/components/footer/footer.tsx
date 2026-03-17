@@ -10,10 +10,10 @@ export default async function Footer() {
                 <div className={styles.top}>
                     <div className={styles.logoWrapper}><Logotype/></div>
                     <div className={styles.links}>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Политика обработки персональных данных</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Политика использования файлов cookie</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Согласие на получение рассылки</a>
+                        <a href="/docs/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">Политика обработки персональных данных</a>
+                        <a href="/docs/cookie-policy.pdf" target="_blank" rel="noopener noreferrer">Политика использования файлов cookie</a>
+                        <a href="/docs/privacy-agreement.pdf" target="_blank" rel="noopener noreferrer">Согласие на обработку персональных данных</a>
+                        <a href="/docs/ads-agreement.pdf" target="_blank" rel="noopener noreferrer">Согласие на получение рассылки</a>
                     </div>
                     <div className={styles.contacts}>
                         <div>Контакты:</div>
