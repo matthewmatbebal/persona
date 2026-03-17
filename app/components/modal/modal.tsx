@@ -25,7 +25,7 @@ export default function Modal({children, isOpen, onClose}:IModal) {
     const ModalContainer = () => {
         return (
             <AnimatePresence>
-                <motion.div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}>
+                <motion.div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`} onClick={isOpen ? onClose : undefined}>
                     {isOpen && <motion.div className={styles.content}>
                         {children}
                     </motion.div>}

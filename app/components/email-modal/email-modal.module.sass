@@ -1,0 +1,80 @@
+.emailBtn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-decoration: none
+  transition: opacity 0.2s
+  background: none
+  border: none
+  cursor: pointer
+  padding: 0
+
+  img
+    width: 20px
+    height: 20px
+    @media (min-width: 768px)
+      width: 28px
+      height: 28px
+
+  &:hover
+    opacity: 0.7
+
+.modal
+  background: linear-gradient(180deg, #FAFBFD 0%, #B8CAE6 100%)
+  border-radius: 24px
+  padding: 36px 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  min-width: 380px
+  @media (max-width: 640px)
+    min-width: unset
+    padding: 28px 20px
+
+.closeBtn
+  position: absolute
+  top: 16px
+  right: 16px
+  background: none
+  border: none
+  cursor: pointer
+  font-size: 20px
+  color: #526179
+  line-height: 1
+  padding: 4px
+
+  &:hover
+    opacity: 0.7
+
+.title
+  font-family: var(--font-tilda)
+  font-size: 22px
+  font-weight: 600
+  color: #2F394D
+  margin-bottom: 20px
+
+.email
+  font-family: var(--font-tilda)
+  font-size: 18px
+  color: #526179
+  margin-bottom: 24px
+  user-select: all
+
+.copyBtn
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 8px
+  background: #52617a
+  color: #F2F5FA
+  border: none
+  border-radius: 12px
+  padding: 12px 28px
+  font-family: var(--font-tilda)
+  font-size: 16px
+  cursor: pointer
+  transition: opacity 0.2s
+
+  &:hover
+    opacity: 0.85

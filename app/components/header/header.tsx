@@ -3,6 +3,7 @@
 import Logotype from "../logotype/logotype";
 import Link from "next/link";
 import Image from "next/image";
+import EmailModal from "../email-modal/email-modal";
 import styles from "./header.module.sass";
 
 export default async function Header() {
@@ -28,9 +29,7 @@ export default async function Header() {
                             <a href="https://t.me/PersontaSupport_bot" target="_blank" rel="noopener noreferrer" className={`${styles.socialLink} ${styles.socialLinkTelegram}`} aria-label="Telegram">
                                 <Image src="/icons/telegram-filled.svg" alt="Telegram" width={24} height={24} />
                             </a>
-                            <a href="mailto:personta.info@yandex.ru" className={styles.socialLink} aria-label="Email">
-                                <Image src="/icons/mail-filled.svg" alt="Email" width={24} height={24} />
-                            </a>
+                            <EmailModal />
                         </div>
                         <div className={styles.workHours}>Время работы с 9:00 до 22:00 по МСК</div>
                         <div className={styles.sloganMobile}>Защищаем бизнес по всей России</div>
@@ -45,9 +44,7 @@ export default async function Header() {
                             <a href="https://t.me/PersontaSupport_bot" target="_blank" rel="noopener noreferrer" className={`${styles.socialLink} ${styles.socialLinkTelegram}`} aria-label="Telegram">
                                 <Image src="/icons/telegram-filled.svg" alt="Telegram" width={24} height={24} />
                             </a>
-                            <a href="mailto:personta.info@yandex.ru" className={styles.socialLink} aria-label="Email">
-                                <Image src="/icons/mail-filled.svg" alt="Email" width={24} height={24} />
-                            </a>
+                            <EmailModal />
                         </div>
                     </div>
                 </div>
