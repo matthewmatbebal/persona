@@ -26,9 +26,9 @@ export default function CookieBanner() {
             <p className={styles.text}>
                 Мы используем файлы cookie и сервис веб-аналитики Яндекс.Метрика для улучшения работы сайта.
                 Продолжая использовать сайт, вы соглашаетесь с нашей{' '}
-                <a href="#" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a>
+                <a href="/docs/cookie-policy.pdf" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a>
                 {' '}и{' '}
-                <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>.
+                <a href="/docs/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>.
             </p>
             <button className={styles.acceptBtn} onClick={handleAccept}>Принять</button>
         </div>
