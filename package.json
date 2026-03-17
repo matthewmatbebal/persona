@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cd out/api && composer install && cd ../..",
+    "build": "next build && (cd out/api && composer install && cd ../.. || true)",
     "start": "next start",
     "lint": "eslint"
   },
