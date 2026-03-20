@@ -35,6 +35,10 @@ export default async function Header() {
                     {/* Desktop only */}
                     <div className={styles.rightDesktop}>
                         <div className={styles.workHoursDesktop}>Время работы с 9:00 до 22:00 по МСК</div>
+                        <div className={styles.phoneBlock}>
+                            <a href="tel:+79186810978" className={styles.phoneNumber}>+7 (918) 681-09-78</a>
+                            <span className={styles.phoneSub}>Консультация бесплатная!</span>
+                        </div>
                         <div className={styles.socialsDesktop}>
                             <a href="tel:+79186810978" className={`${styles.socialLink} ${styles.socialLinkPhone}`} aria-label="Телефон">
                                 <Image src="/icons/phone-header.svg" alt="Телефон" width={24} height={24} />
