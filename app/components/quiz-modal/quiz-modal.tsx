@@ -263,7 +263,7 @@ export default function QuizModal({ onClose }: QuizModalProps) {
                 ) : (
                     <button
                         className={styles.submitBtn}
-                        disabled={submitting || !consentPersonal || !consentMarketing}
+                        disabled={submitting || !consentPersonal}
                         onClick={async () => {
                             setSubmitting(true)
                             const result = await sendEmail({

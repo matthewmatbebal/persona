@@ -65,7 +65,7 @@ export default function RequestButton({ variant = "dark", size = "md", children 
                         consentMarketing={consentMarketing}
                         onConsentMarketingChange={setConsentMarketing}
                     />
-                    <Button variant="dark" size="md" type="submit" disabled={loading || !consentPersonal || !consentMarketing}>
+                    <Button variant="dark" size="md" type="submit" disabled={loading || !consentPersonal}>
                         {loading ? 'Отправка...' : 'Отправить'}
                     </Button>
                 </form>

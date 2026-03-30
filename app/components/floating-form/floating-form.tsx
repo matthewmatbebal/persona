@@ -113,7 +113,7 @@ export default function FloatingForm() {
                     consentMarketing={consentMarketing}
                     onConsentMarketingChange={setConsentMarketing}
                 />
-                <Button variant="dark" size="md" className={styles.btn} type="submit" disabled={loading || !consentPersonal || !consentMarketing}>
+                <Button variant="dark" size="md" className={styles.btn} type="submit" disabled={loading || !consentPersonal}>
                     {loading ? 'Отправка...' : 'Отправить'}
                 </Button>
             </form>
